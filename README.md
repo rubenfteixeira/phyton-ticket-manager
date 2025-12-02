@@ -1,110 +1,118 @@
-# Sistema de Gestão de Atendimento em Python
+# Service Desk Management System (Python)
 
-Este projeto é um sistema de gestão de atendimento desenvolvido em **Python**, orientado para lojas de assistência técnica que realizam **reparações** e **entregas**.  
-O programa funciona através da linha de comandos e permite registar pedidos, gerir tickets e gerar relatórios por data.
+This project is a **Python console-based service desk management system** designed for technical support or repair shops.  
+It allows registering tickets, managing service counters, calculating waiting times, and generating daily reports based on stored records.
 
----
-
-## 🚀 Funcionalidades Principais
-
-### 🔧 Reparações
-- Geração automática de senha
-- Registo da hora de chegada e atendimento
-- Nome do cliente
-- Produto e anomalia
-- Custo inicial
-- Observações
-- Cálculo automático do tempo de espera
-- Guarda tudo no ficheiro `meu_arquivo.txt`
-
-### 📦 Entregas
-- Geração automática de senha  
-- Registo de hora  
-- Nome do cliente  
-- Custo  
-- Observações  
-- Cálculo do tempo de espera  
-- Registo no ficheiro `meu_arquivo.txt`
+All data is saved in a simple text database: `db.txt`.
 
 ---
 
-## 📊 Menu de Gestão
+## 🚀 Main Features
 
-Através de um código de acesso (2222), é possível consultar:
+### 🔧 Repair Tickets
+- Automatic ticket numbering  
+- Timestamp for arrival and service  
+- Customer name  
+- Product and reported issue  
+- Initial cost  
+- Additional notes  
+- Automatic waiting time calculation  
+- Stored in `db.txt`
 
-1. **Tickets atendidos por data**  
-2. **Média de espera por data**  
-3. **Atendimentos por balcão**  
-4. **Receitas totais por data**  
-5. **Mapa completo de todos os tickets registados**  
-6. **Encerrar o programa**  
-7. **Voltar ao menu inicial**
+### 📦 Delivery Tickets
+- Automatic ticket numbering  
+- Timestamp logging  
+- Customer name  
+- Cost  
+- Additional notes  
+- Waiting time calculation  
+- Stored in `db.txt`
 
 ---
 
-## 📁 Estrutura de Dados
+## 📊 Management Menu
 
-Todos os registos são guardados no ficheiro:
+Accessible with a security code (**2222**).  
+Includes:
 
-meu_arquivo.txt
+1. **Tickets served by date**  
+2. **Average waiting time per date**  
+3. **Counters (balcões) usage per date**  
+4. **Total revenue per date**  
+5. **Complete ticket database view**  
+6. **Exit program**  
+7. **Return to main menu**
+
+---
+
+## 📁 File Structure
+
+All records are written to:
+
+db.txt
 
 yaml
 Copiar código
 
-Cada linha contém um ticket completo com:
-- Tipo (Reparação/Entrega)
-- Número da senha
-- Data de chegada
-- Data de atendimento
-- Cliente
-- Balcão
-- Custo
-- Observações
-- Tempo de espera
+Each line contains:
+
+- Ticket type (Repair/Delivery)  
+- Ticket number  
+- Arrival timestamp  
+- Service timestamp  
+- Customer name  
+- Counter number  
+- Cost  
+- Notes  
+- Waiting time  
 
 ---
 
-## 🕒 Horário de Funcionamento
+## 🕒 Operating Hours
 
-O sistema só permite utilização dentro do período definido:
-- **Das 00:00 às 23:00**  
-(Código facilmente ajustável no futuro.)
+The system only works within predefined hours:
+
+- **00:00 to 23:00**
+
+(Easily adjustable in the code.)
 
 ---
 
-## ▶️ Como Executar
+## ▶️ How to Run
 
-1. Certifica-te de que tens Python 3 instalado.
-2. Corre o script principal:
+1. Make sure Python 3 is installed.
+2. Run the script:
 
 ```bash
-python nome_do_ficheiro.py
-O menu inicial será apresentado automaticamente.
+python main.py
+The main menu will appear automatically.
 
-🛠️ Tecnologias Utilizadas
+🛠 Technologies Used
 Python 3
 
-Biblioteca datetime
+datetime module
 
-Manipulação de ficheiros .txt
+File handling (.txt storage)
 
-Sistema de menus interactivo
+Input validation
 
-📌 Objetivo do Projeto
-Este sistema foi criado com fins académicos, focando-se no uso de:
+Console-based user interface
 
-Controlo de fluxo
+📌 Project Purpose
+This project was developed for academic learning, covering:
 
-Funções
+Functions and modularity
 
-Modularidade
+Error handling
 
-Manipulação de ficheiros
+Time calculations
 
-Tratamento de exceções
+File persistence
 
-Registo temporal de operações
+Console interaction
 
-📜 Licença
-Este projeto é livre para uso académico e pessoal.
+Simple data analysis
+
+📜 License
+Free to use for educational and personal purposes.
 
