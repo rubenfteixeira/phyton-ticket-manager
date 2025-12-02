@@ -88,7 +88,7 @@ def reparação(data1):
 
       arquivo.append(str(espera))
 
-      with open("meu_arquivo.txt", 'a') as f:
+      with open("db.txt", 'a') as f:
         f.write(str(arquivo))
         f.write("\n")
 
@@ -124,7 +124,7 @@ def entrega(data1):
 
       arquivo.append(str(espera))
 
-      with open("meu_arquivo.txt", 'a') as f:
+      with open("db.txt", 'a') as f:
         f.write(str(arquivo))
         f.write("\n")
       break
@@ -176,7 +176,7 @@ def gestão():
 #Função de gestão de tickets na respectiva data.
 def dataTicket(data):
 
-  with open("meu_arquivo.txt", "r") as arquivo:
+  with open("db.txt", "r") as arquivo:
     for linha in arquivo:
       array = linha.split(',')
       if data in array[2]:
@@ -195,7 +195,7 @@ def mediaEspera(data):
   min = 0
   seg = 0
 
-  with open("meu_arquivo.txt", "r") as arquivo:
+  with open("db.txt", "r") as arquivo:
     for linha in arquivo:
       array = linha.split(',')
       if data in array[2]:
@@ -222,7 +222,7 @@ def mediaEspera(data):
 #Função de gestão de atendimentos por balcão na respectiva data.
 def balcão(data):
 
-  with open("meu_arquivo.txt", "r") as arquivo:
+  with open("db.txt", "r") as arquivo:
     for linha in arquivo:
       array = linha.split(',')
       if data in array[2]:
@@ -249,7 +249,7 @@ def balcão(data):
 def receitas(data):
   contador = 0
   totalReceitas = 0
-  with open("meu_arquivo.txt", "r") as arquivo:
+  with open("db.txt", "r") as arquivo:
     for linha in arquivo:
       array = linha.split(',')
       if data in array[2]:
@@ -264,7 +264,7 @@ def receitas(data):
 
 #Função de gestão de informações dos tickets.
 def mapaTickets():
-  with open("meu_arquivo.txt", "r") as arquivo:
+  with open("db.txt", "r") as arquivo:
     for linha in arquivo:
       print(linha)
 
